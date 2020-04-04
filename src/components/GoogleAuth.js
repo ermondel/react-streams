@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn, signOut } from '../actions';
+import { clientId } from '../config';
 
 class GoogleAuth extends Component {
   componentDidMount() {
+    if (!clientId) {
+      throw new Error('--- [App Error] GoogleAuth configuration not found!');
+    }
+
     window.gapi.load('client:auth2', () => {
-      window.gapi.client
-        .init({
-          clientId: '',
-          scope: 'email'
-        })
-        .then(() => {
-          this.auth = window.gapi.auth2.getAuthInstance();
-          this.onAuthChange(this.auth.isSignedIn.get());
-          this.auth.isSignedIn.listen(this.onAuthChange);
-        });
+      window.gapi.client.init({ clientId, scope: 'email' }).then(() => {
+        this.auth = window.gapi.auth2.getAuthInstance();
+        this.onAuthChange(this.auth.isSignedIn.get());
+        this.auth.isSignedIn.listen(this.onAuthChange);
+      });
     });
   }
 
