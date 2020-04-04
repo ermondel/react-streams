@@ -6,9 +6,10 @@ import StreamEdit from './streams/StreamEdit';
 import StreamShow from './streams/StreamShow';
 import StreamDelete from './streams/StreamDelete';
 import Header from './Header';
+import './App.css';
 
 const App = () => (
-  <div className="ui container">
+  <div className="ui container app">
     <BrowserRouter>
       <div>
         <Header />

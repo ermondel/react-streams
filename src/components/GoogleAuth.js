@@ -36,7 +36,7 @@ class GoogleAuth extends Component {
 
   renderAuthButton() {
     if (this.props.isSignedIn === null) {
-      return null;
+      return <div class="ui active inline loader"></div>;
     } else if (this.props.isSignedIn) {
       return (
         <button onClick={this.onSignOutClick} className="ui red google button">
