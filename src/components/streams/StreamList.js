@@ -10,13 +10,18 @@ class StreamList extends Component {
 
   renderAdmin(stream) {
     if (stream.userId === this.props.currentUserId) {
+      const classBlock = 'right floated content';
+      const classEdit = 'ui button primary';
+      const classDel = 'ui button negative';
+
       return (
-        <div className="right floated content">
-          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+        <div className={classBlock}>
+          <Link to={`/streams/edit/${stream.id}`} className={classEdit}>
             Edit
           </Link>
-          {/* <button className="ui button primary">Edit</button> */}
-          <button className="ui button negative">Delete</button>
+          <Link to={`/streams/delete/${stream.id}`} className={classDel}>
+            Delete
+          </Link>
         </div>
       );
     }
