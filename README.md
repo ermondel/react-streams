@@ -93,8 +93,12 @@ Step 2
 
 1. Run OBS Studio (`obs`)
 2. In the `Scenes` section add a new scene with an arbitrary name.
-3. Click on the newly created scene and in the `Sources` section add `Screen Capture (XSHM)` and `Audio Input Capture`.
-4. Click the `Settings` button, select the `Stream` item and enter the `stream key` (previously saved 9), save the settings.
+3. Click the scene you just created and in the `Sources` section add `Screen Capture (XSHM)` and `Audio Input Capture`.
+4. Click the `Settings` button, select the `Stream` item and configure:  
+   4.1. `Service`: `Custom`  
+   4.2. `Server`: `rtmp://localhost/live`  
+   4.3. `Stream Key`: 9 (_see Step 1, item 6_)  
+   4.4. click OK
 5. Click the `Start Streaming` button.
 6. Return to the browser (`http://localhost:3000/`), select your stream in the list and click on it.
 7. Click the play button in the video player.
