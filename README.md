@@ -6,11 +6,11 @@ _Project for Udemy ReactJS course._
 
 ### About
 
-Simple local streaming video service.
+Simple local video streaming service.
 
 ### Features
 
-Create, update, delete, view streams.
+Create, update, delete and view streams.
 
 ### Requirements
 
@@ -83,7 +83,7 @@ npm start
 Step 1
 
 1. Open `http://localhost:3000/` in browser (Chrome for example).
-2. Click the blue `Sign in to Google` button. Login with your username and password.
+2. Click the blue `Sign in with Google` button. Login with your username and password.
 3. Click the blue `Create Stream` button.
 4. Enter the title and description of the stream and then submit the form.
 5. Select your stream from the list and click on it.
@@ -96,11 +96,12 @@ Step 2
 3. Click on the newly created scene and in the `Sources` section add `Screen Capture (XSHM)` and `Audio Input Capture`.
 4. Click the `Settings` button, select the `Stream` item and enter the `stream key` (previously saved 9), save the settings.
 5. Click the `Start Streaming` button.
-6. Return to the browser (`http://localhost:3000/streams/9`) and click the play button in the video player.
-7. Watch the stream.
-8. ...
-9. In OBS Studio, click the `Stop Streaming` button.
-10. Return to the browser and click on the `All streams` link to display the list of streams, or sign out and close the browser.
+6. Return to the browser (`http://localhost:3000/`), select your stream in the list and click on it.
+7. Click the play button in the video player.
+8. Watch the stream.
+9. ...
+10. In OBS Studio click the `Stop Streaming` button.
+11. Return to the browser and click the `All streams` link to display the list of streams, or sign out and close the browser.
 
 ### Technologies
 
