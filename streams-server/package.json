@@ -1,6 +1,6 @@
 {
   "name": "streams-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "streams server",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "ermondel",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.1"
+    "json-server": "^0.16.3"
   }
 }
