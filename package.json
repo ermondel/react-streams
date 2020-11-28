@@ -1,6 +1,6 @@
 {
   "name": "react-streams",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
@@ -22,8 +22,8 @@
   },
   "scripts": {
     "client": "react-scripts start",
-    "media": "node media-server.js",
-    "rest": "json-server -p 3001 -w db.json",
+    "media": "node ./src/media-server.js",
+    "rest": "json-server -p 3001 -w ./src/db.json",
     "start": "concurrently \"npm:media\" \"npm:rest\" \"npm:client\""
   },
   "eslintConfig": {
